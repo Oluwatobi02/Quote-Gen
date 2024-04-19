@@ -1,11 +1,13 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 from flask_cors import CORS, cross_origin
 from datetime import datetime
 import json
 from quotefunction import prepare_sentiment_quote_stash, gimme_a_quote
 
+
+
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
+CORS(app, resources={r"/audio": {"origins": "http://localhost:5173"}})
 
 
 

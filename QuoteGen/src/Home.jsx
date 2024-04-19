@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 const Home = () => {
+    
 
     let quotes = localStorage.quotes
-    quotes = JSON.parse(quotes) || [];
+    quotes = quotes ? JSON.parse(quotes) || [] : [];
     const [quote, setQuote] = useState({})
 
     const handleClick = (e) => {
@@ -32,6 +33,7 @@ const Home = () => {
     } 
 
   return (
+    <>
     <div className='quote-container'>
         <h1 className='quote-heading'>Select a Quote</h1>
         <hr />
@@ -45,6 +47,7 @@ const Home = () => {
             <button onClick={handleClick}>brighter</button>
         </div>
     </div>
+    </>
   )
 }
 

@@ -1,5 +1,11 @@
 import { useEffect } from "react"
+import jobAnimation from './assets/Animation - 1712111764905.json'
+import Lottie from 'lottie-react'
 import Home from "./Home"
+// import VideoRecorder from "./recording"
+import AudioCapture from "./VideoRecorder"
+
+import VideoRecorder from "./VideoRecorder"
 
 function App() {
 
@@ -15,9 +21,11 @@ function App() {
 
   return (
     <>
-    <div className='app-body'>
+     <div className='app-body'>
       <Home />
-    </div>
+    <Lottie animationData={jobAnimation} size={10}/>
+    </div> 
+ 
     </>
   )
 }
